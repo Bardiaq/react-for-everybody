@@ -175,7 +175,7 @@ plotOptions: {
           console.log(result.hc)
         },
         (eror) => {
-        }//*in the fetch paranthes you should write your request ip*\\
+        }
       )
 }
 
