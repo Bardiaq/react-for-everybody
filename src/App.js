@@ -8,6 +8,7 @@ import HighchartsReact from 'highcharts-react-official';
 
 
 
+
 //let option={
 
   //chart: {
@@ -54,7 +55,7 @@ import HighchartsReact from 'highcharts-react-official';
 class App extends Component {
   state = {
     chart: {
-           type: 'column'
+           type: 'pie'
        },
        xAxis: {
          categories: ['Lap tob', 'Iphone', 'Televisions', 'Samsung A12']
@@ -69,20 +70,22 @@ class App extends Component {
       text: 'Number of products'
   }
 },
-tooltip: {
-  formatter: function () {
-     return '<b>' + this.x + '</b><br/>' +
-          this.series.name + ': ' + this.y + '<br/>' +
-          'Total: ' + this.point.stackTotal;
-  }
- },
+// tooltip: {
+//   formatter: function () {
+//      return '<b>' + this.x + '</b><br/>' +
+//           this.series.name + ': ' + this.y + '<br/>' +
+//           'Total: ' + this.point.stackTotal;
+//   }
+//  },
 plotOptions: {
+  pie: {
+    allowPointSelect: true,},
   column: {
      stacking: 'normal'
    }
 },
     series: 
-    [{ name: 'Your Products',
+    [{ name: 'Your Product',
       data: [] }],
     
     counters:[]
@@ -167,9 +170,9 @@ plotOptions: {
       .then(
         (result) => {
           this.setState({  series: [{ data: result.hc }],counters: result.cn})
-          
+//
           console.log(result.cn)
-          
+          console.log(result.hc)
         },
         (eror) => {
         }//*in the fetch paranthes you should write your request ip*\\
