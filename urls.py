@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from djangoProject4.GetData import getstudents
+from djangoProject4.GetData import getproducts
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('counterss/',getstudents),
+    path('counterss/',getproducts),
 ]
