@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Navbar from 'react-bootstrap/Navbar'
 
 class NavBar extends Component {
-  state = {}
+  
   render() {
     return (
       <div>
