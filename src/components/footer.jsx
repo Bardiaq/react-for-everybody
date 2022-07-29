@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 class Footer extends Component {
-    state = {  } 
+
     render() { 
         return (<div>
             <footer class="bg-warning text-center text-white">
